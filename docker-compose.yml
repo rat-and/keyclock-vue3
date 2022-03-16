@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  keyclock-vue3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DOCKER_ENV: dev
+    image:
+      keyclock-vue3
+    ports:
+      - "8081:8080"
+    volumes:
+      - .:/app
+    command: >
+      sh -c "npm run serve"
+    mem_limit: 4g
