@@ -3,7 +3,7 @@ ARG DOCKER_ENV
 FROM node:16.14-alpine AS base
 ENV PATH /app/node_modules/.bin:$PATH
 WORKDIR /app
-COPY . .
+COPY ./app .
 RUN npm install
 
 FROM base AS image-version-dev

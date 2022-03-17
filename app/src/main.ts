@@ -10,14 +10,17 @@ createApp(App)
       // onLoad = "check-sso" | "login-required"
       // Use 'login-required' to always require authentication
       // If using 'login-required', there is no need for the router guards in router.js
-      onLoad: "login-required",
+      onLoad: "check-sso",
       // silentCheckSsoRedirectUri:
       //   window.location.origin + "/silent-check-sso.html",
     },
     config: {
-      url: "http://localhost:8080/dummy",
+      url: "http://localhost:8080",
       clientId: "vue-client",
-      realm: "vue",
+      realm: "Creoox SSO Demo",
+      // url: process.env.VUE_APP_KEYCLOAK_ADDRESS,
+      // clientId: process.env.VUE_APP_KEYCLOAK_CLIENT_ID,
+      // realm: process.env.VUE_APP_KEYCLOAK_REALM,
     },
     onReady(keycloak: KeycloakInstance) {
       console.log("Keycloak ready", keycloak);

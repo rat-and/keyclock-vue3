@@ -1,6 +1,6 @@
 {
-  "name": "typescript_vue3",
-  "version": "0.1.0",
+  "name": "keycloak_vue3",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --port 8081",
@@ -9,6 +9,7 @@
   "dependencies": {
     "@dsb-norge/vue-keycloak-js": "2.1.1-beta",
     "core-js": "^3.6.5",
+    "@types/node": "^17.0.21",
     "vue": "^3.1.4"
   },
   "devDependencies": {

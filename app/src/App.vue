@@ -6,18 +6,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 import Secret from "@/components/Secret.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    Secret
+    Secret,
   },
-  created () {
+  created() {
     // Should work referencing custom property on 'this' in typescript
-    console.log('App created', this.$keycloak)
-  }
+    console.log("App created", this.$keycloak);
+  },
 });
 </script>
 

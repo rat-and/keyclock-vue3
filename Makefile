@@ -1,5 +1,5 @@
 CURR_PATH = $(shell pwd)
-APP_NAME = $(shell echo "keyclock-vue3")
+APP_NAME = $(shell echo "keycloak-vue3")
 
 ######### Development Environment #########
 .PHONY: build-dev-env run-dev-env run-dev-env-it down-dev-env
@@ -10,6 +10,12 @@ build-dev-env:
  		--file docker-compose.yml \
  		--project-name $(APP_NAME) \
  		build
+	@docker-compose \
+		--file docker-compose.yml run \
+		--rm \
+		--no-deps \
+		$(APP_NAME) \
+		sh -c 'npm install'
 	@echo "[DEV-INFO] DEV instance(s) image(s) were successfully built!"
 
 # Run DEV instance
